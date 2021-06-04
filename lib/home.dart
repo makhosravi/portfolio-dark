@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Coolers.primaryColor,
+      color: Coolors.primaryColor,
       child: VStack([
         HeaderScreen(),
       ]).scrollVertical(),

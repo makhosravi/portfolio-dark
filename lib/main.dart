@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         accentColor: Coolers.accentColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Container(),
+      home: HomeScreen(),
     );
   }
 }

@@ -1,4 +1,3 @@
-# flutter_portfolio
 
 A web base portfolio designed by flutter web
 
@@ -14,3 +13,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+# portfolio-dark
+This is my first try at flutter web, inspired from mtechviral YouTube channel. As used in the sample, velocity_x package is the ui framework. This package offers many features and, among others, offers good flexibility for responsive parts of the project.
+>>>>>>> ccc244ed4a75b4d0f2dc92b89ade3fbffe6cf63b

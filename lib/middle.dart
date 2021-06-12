@@ -14,10 +14,10 @@ class MiddleScreen extends StatelessWidget {
           'All creative Works.\n'
               .richText
               .withTextSpanChildren(
-            [
-              'Selected projects.'.textSpan.yellow400.make(),
-            ],
-          )
+                [
+                  'Selected projects.'.textSpan.yellow400.make(),
+                ],
+              )
               .xl4
               .white
               .make(),
@@ -51,13 +51,7 @@ class ProjectWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return title!
-        .text
-        .bold
-        .white
-        .xl
-        .wide
-        .center
+    return title!.text.bold.white.xl.wide.center
         .make()
         .box
         .p8
@@ -65,12 +59,11 @@ class ProjectWidget extends StatelessWidget {
         .alignCenter
         .square(200)
         .neumorphic(
-      color: Vx.purple700,
-      elevation: 5.0,
-      curve: VxCurve.flat,
-    )
+          color: Vx.purple700,
+          elevation: 5.0,
+          curve: VxCurve.flat,
+        )
         .make()
         .p16();
   }
 }
-

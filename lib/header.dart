@@ -11,8 +11,15 @@ class HeaderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var nameWidget =
-        'MAKH'.text.white.xl6.lineHeight(1).size(context.isMobile ? 15 : 20).bold.make().shimmer();
+    var nameWidget = 'MAKH'
+        .text
+        .white
+        .xl6
+        .lineHeight(1)
+        .size(context.isMobile ? 15 : 20)
+        .bold
+        .make()
+        .shimmer();
     return SafeArea(
       child: VxBox(
         child: VStack(
@@ -31,7 +38,11 @@ class HeaderScreen extends StatelessWidget {
                         30.heightBox,
                         nameWidget,
                         20.heightBox,
-                        VxBox().color(Coolors.accentColor).size(60, 10).make().shimmer(
+                        VxBox()
+                            .color(Coolors.accentColor)
+                            .size(60, 10)
+                            .make()
+                            .shimmer(
                               primaryColor: Coolors.accentColor,
                             ),
                         30.heightBox,
@@ -41,9 +52,15 @@ class HeaderScreen extends StatelessWidget {
                     Expanded(
                       child: VxResponsive(
                         fallback: const Offstage(),
-                        small: IntroductionWidget().pOnly(left: 120).h(context.percentHeight * 60),
-                        medium: IntroductionWidget().pOnly(left: 120).h(context.percentHeight * 60),
-                        large: IntroductionWidget().pOnly(left: 120).h(context.percentHeight * 60),
+                        small: IntroductionWidget()
+                            .pOnly(left: 120)
+                            .h(context.percentHeight * 60),
+                        medium: IntroductionWidget()
+                            .pOnly(left: 120)
+                            .h(context.percentHeight * 60),
+                        large: IntroductionWidget()
+                            .pOnly(left: 120)
+                            .h(context.percentHeight * 60),
                       ),
                     ),
                   ],
@@ -53,8 +70,11 @@ class HeaderScreen extends StatelessWidget {
           ],
         ),
       )
-          .size(context.screenWidth,
-              context.isMobile ? context.percentHeight * 70 : context.percentHeight * 60)
+          .size(
+              context.screenWidth,
+              context.isMobile
+                  ? context.percentHeight * 70
+                  : context.percentHeight * 60)
           .color(Coolors.secondaryColor)
           .make(),
     );
@@ -77,7 +97,9 @@ class IntroductionWidget extends StatelessWidget {
               .xl3
               .maxLines(5)
               .make()
-              .w(context.isMobile ? context.screenWidth : context.percentWidth * 40),
+              .w(context.isMobile
+                  ? context.screenWidth
+                  : context.percentWidth * 40),
           20.heightBox,
         ].vStack(),
         ElevatedButton(
@@ -86,13 +108,15 @@ class IntroductionWidget extends StatelessWidget {
           },
           child: 'Visit google.com'.text.make(),
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Coolors.accentColor),
+            backgroundColor:
+                MaterialStateProperty.all<Color>(Coolors.accentColor),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(7.5),
               ),
             ),
-            overlayColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+            overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                (Set<MaterialState> states) {
               if (states.contains(MaterialState.hovered)) return Vx.purple700;
               return null;
             }),
@@ -115,7 +139,9 @@ class PictureWidget extends StatelessWidget {
       child: Image.asset(
         'assets/images/pic.png',
         fit: BoxFit.cover,
-        height: context.isMobile ? context.percentHeight * 70 : context.percentHeight * 60,
+        height: context.isMobile
+            ? context.percentHeight * 70
+            : context.percentHeight * 60,
       ),
     );
   }

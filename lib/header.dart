@@ -52,7 +52,11 @@ class HeaderScreen extends StatelessWidget {
             ),
           ],
         ),
-      ).size(context.screenWidth, context.percentHeight * 60).color(Coolors.secondaryColor).make(),
+      )
+          .size(context.screenWidth,
+              context.isMobile ? context.percentHeight * 70 : context.percentHeight * 60)
+          .color(Coolors.secondaryColor)
+          .make(),
     );
   }
 }
@@ -111,7 +115,7 @@ class PictureWidget extends StatelessWidget {
       child: Image.asset(
         'assets/images/pic.png',
         fit: BoxFit.cover,
-        height: context.percentHeight * 60,
+        height: context.isMobile ? context.percentHeight * 70 : context.percentHeight * 60,
       ),
     );
   }
